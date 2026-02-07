@@ -22,6 +22,8 @@ class AppColors {
   final Color orange = const Color(0xFFF17600);
   final Color highlight = const Color(0xFF8DB501);
   final Color transparent = Colors.transparent;
+  final Color background = const Color(0xFFF4F4F4);
+
 
   ////////////////  app primary use blue color
   final Color primary50 = const Color(0xffe6f2ff);

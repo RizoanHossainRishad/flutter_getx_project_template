@@ -1,10 +1,8 @@
-import 'package:core_kit/core_kit.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_project_template/constant/app_api_end_point.dart';
 import 'package:flutter_getx_project_template/routes/app_routes.dart';
 import 'package:flutter_getx_project_template/routes/app_routes_file.dart';
 import 'package:flutter_getx_project_template/screens/error_screen/error_screen.dart';
-import 'package:flutter_getx_project_template/services/storage_services/get_storage_services.dart';
 import 'package:flutter_getx_project_template/utils/app_theme.dart';
 import 'package:get/get.dart';
 
