@@ -127,21 +127,21 @@ Future<bool> askFirst({
 
   await Get.defaultDialog(
     title: title,
-    content: AppText(data: content, textAlign: TextAlign.center),
+    content: textWidget(text: content, textAlign: TextAlign.center),
     radius: 8,
     confirm: ElevatedButton(
       onPressed: () async {
         userConfirmed = true;
         Get.closeAllDialogs();
       },
-      child: AppText(data: acceptButton),
+      child: textWidget(text: acceptButton),
     ),
     cancel: TextButton(
       onPressed: () {
         userConfirmed = false;
         Get.closeAllDialogs();
       },
-      child: AppText(data: cancelButton),
+      child: textWidget(text: cancelButton),
     ),
   );
   return userConfirmed;
@@ -157,21 +157,21 @@ Future<bool> getCallAgainPermission({
 
   await Get.defaultDialog(
     title: title,
-    content: AppText(data: content, textAlign: TextAlign.center),
+    content: textWidget(text: content, textAlign: TextAlign.center),
     radius: 8,
     confirm: ElevatedButton(
       onPressed: () async {
         userConfirmed = true;
         Get.closeAllDialogs();
       },
-      child: AppText(data: acceptButton),
+      child: textWidget(text: acceptButton),
     ),
     cancel: TextButton(
       onPressed: () {
         userConfirmed = false;
         Get.closeAllDialogs();
       },
-      child: AppText(data: cancelButton),
+      child: textWidget(text: cancelButton),
     ),
   );
 

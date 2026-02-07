@@ -6,8 +6,8 @@ import 'package:flutter_getx_project_template/utils/app_size.dart';
 import 'package:flutter_getx_project_template/utils/error_log.dart';
 import 'package:get/get.dart';
 
-class AppInputWidget extends StatefulWidget {
-  const AppInputWidget({
+class TextformfieldWidget extends StatefulWidget {
+  const TextformfieldWidget({
     super.key,
     this.hintText,
     this.prefix,
@@ -100,10 +100,10 @@ class AppInputWidget extends StatefulWidget {
   final Iterable<String>? autofillHints;
   final String? Function(String?)? validator;
   @override
-  State<AppInputWidget> createState() => _AppInputWidgetState();
+  State<TextformfieldWidget> createState() => _TextformfieldWidgetState();
 }
 
-class _AppInputWidgetState extends State<AppInputWidget> {
+class _TextformfieldWidgetState extends State<TextformfieldWidget> {
   bool isShowPassWord = true;
   @override
   Widget build(BuildContext context) {

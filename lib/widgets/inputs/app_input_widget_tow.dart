@@ -107,10 +107,10 @@ class _AppInputWidgetTwoState extends State<AppInputWidgetTwo> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                AppText(data: widget.title ?? "", fontWeight: FontWeight.w500, color: widget.titleColor ?? AppColors.instance.dark200, fontSize: 18),
+                textWidget(text: widget.title ?? "", fontWeight: FontWeight.w500, color: widget.titleColor ?? AppColors.instance.dark200, fontSize: 18),
                 Padding(
                   padding: EdgeInsets.only(right: AppSize.width(value: 10.0)),
-                  child: AppText(data: widget.subTitle ?? "", fontWeight: FontWeight.w400, color: widget.titleColor ?? AppColors.instance.dark200, fontSize: 14),
+                  child: textWidget(text: widget.subTitle ?? "", fontWeight: FontWeight.w400, color: widget.titleColor ?? AppColors.instance.dark200, fontSize: 14),
                 ),
               ],
             ),

@@ -23,7 +23,7 @@ class SignUpScreen extends StatelessWidget {
         init: SignUpController(),
         builder: (controller) {
           return Scaffold(
-            appBar: AppBar(title: AppText(data: "Create New Account", fontSize: 18), centerTitle: true, surfaceTintColor: AppColors.instance.white50),
+            appBar: AppBar(title: textWidget(text: "Create New Account", fontSize: 18), centerTitle: true, surfaceTintColor: AppColors.instance.white50),
             body: SafeArea(
               child: SingleChildScrollView(
                 padding: EdgeInsets.symmetric(horizontal: AppSize.width(value: 20.0)),
@@ -49,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
                                   },
                                 ),
 
-                                AppText(data: "User", fontWeight: FontWeight.bold, fontSize: 20),
+                                textWidget(text: "User", fontWeight: FontWeight.bold, fontSize: 20),
                               ],
                             ),
 
@@ -64,7 +64,7 @@ class SignUpScreen extends StatelessWidget {
                                   },
                                 ),
 
-                                AppText(data: "Agency", fontWeight: FontWeight.bold, fontSize: 20),
+                                textWidget(text: "Agency", fontWeight: FontWeight.bold, fontSize: 20),
                                 Gap(width: 30),
                               ],
                             ),
@@ -72,7 +72,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                       Gap(height: AppSize.height(value: 10)),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         controller: controller.fullNameTextEditingController,
                         borderColor: AppColors.instance.boxBg,
                         labelText: "Full Name",
@@ -80,7 +80,7 @@ class SignUpScreen extends StatelessWidget {
                         prefix: Icon(Icons.person_outlined, color: AppColors.instance.dark200),
                       ),
                       Gap(height: AppSize.height(value: 20)),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         controller: controller.emailTextEditingController,
                         borderColor: AppColors.instance.boxBg,
                         labelText: "Email",
@@ -90,7 +90,7 @@ class SignUpScreen extends StatelessWidget {
                         prefix: Icon(Icons.email_outlined, color: AppColors.instance.dark200),
                       ),
                       Gap(height: AppSize.height(value: 20)),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         controller: controller.locationTextEditingController,
                         borderColor: AppColors.instance.boxBg,
                         labelText: "Location",
@@ -98,7 +98,7 @@ class SignUpScreen extends StatelessWidget {
                         prefix: Icon(Icons.location_on_outlined, color: AppColors.instance.dark200),
                       ),
                       Gap(height: AppSize.height(value: 20)),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         controller: controller.passwordTextEditingController,
                         borderColor: AppColors.instance.boxBg,
                         labelText: "Password",
@@ -108,7 +108,7 @@ class SignUpScreen extends StatelessWidget {
                         prefix: Icon(Icons.lock_outline, color: AppColors.instance.dark200),
                       ),
                       Gap(height: AppSize.height(value: 20)),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         controller: controller.confirmPasswordTextEditingController,
                         isPassWordSecondValidation: true,
                         isPassWordSecondValidationController: controller.passwordTextEditingController,

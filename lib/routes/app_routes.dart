@@ -19,4 +19,6 @@ class AppRoutes {
   final String termsAndConditions = "/terms-and-conditions";
   final String privacyPolicy = "/privacy-policy";
   final String aboutUs = "/about-us";
+
+  final String demoscreen = "/demoscreen";
 }

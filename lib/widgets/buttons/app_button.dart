@@ -63,7 +63,7 @@ class AppButton extends StatelessWidget {
         child:
             isLoading
                 ? SizedBox(width: loadingSize ?? Get.height * 0.04, height: loadingSize ?? Get.height * 0.04, child: CircularProgressIndicator(color: loaderColor ?? AppColors.instance.white50))
-                : child ?? AppText(data: title ?? "", color: titleColor ?? AppColors.instance.white50, fontWeight: FontWeight.w700),
+                : child ?? textWidget(text: title ?? "", color: titleColor ?? AppColors.instance.white50, fontWeight: FontWeight.w700),
       ),
     );
   }

@@ -34,13 +34,13 @@ class ForgotScreenCreatePasswordScreen extends StatelessWidget {
                       Column(
                         children: [
                           Gap(height: 10),
-                          AppText(data: "Create new password", fontSize: 25, fontWeight: FontWeight.w500),
+                          textWidget(text: "Create new password", fontSize: 25, fontWeight: FontWeight.w500),
                           Gap(height: 5),
-                          AppText(data: "Password must have 8 characters", color: AppColors.instance.subTextColor),
+                          textWidget(text: "Password must have 8 characters", color: AppColors.instance.subTextColor),
                           Gap(height: 50),
                         ],
                       ),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         controller: controller.passwordTextEditingController,
                         borderColor: AppColors.instance.boxBg,
                         labelText: "New password",
@@ -50,7 +50,7 @@ class ForgotScreenCreatePasswordScreen extends StatelessWidget {
                         prefix: Icon(Icons.lock_outline, color: AppColors.instance.dark200),
                       ),
                       Gap(height: AppSize.height(value: 20)),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         controller: controller.confirmPasswordTextEditingController,
                         isPassWordSecondValidation: true,
                         isPassWordSecondValidationController: controller.passwordTextEditingController,

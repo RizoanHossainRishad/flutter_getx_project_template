@@ -39,7 +39,7 @@ void appImageUserTake({required RxString localImagePath, required Function() cal
                   child: Column(
                     children: [
                       Icon(Icons.camera_alt, size: 60, color: AppColors.instance.primary),
-                      const AppText(data: "Camera", fontWeight: FontWeight.w700),
+                      const textWidget(text: "Camera", fontWeight: FontWeight.w700),
                     ],
                   ),
                 ),
@@ -54,7 +54,7 @@ void appImageUserTake({required RxString localImagePath, required Function() cal
                   child: Column(
                     children: [
                       Icon(Icons.collections, size: 60, color: AppColors.instance.primary),
-                      const AppText(data: "Gallery", fontWeight: FontWeight.w700),
+                      const textWidget(text: "Gallery", fontWeight: FontWeight.w700),
                     ],
                   ),
                 ),
@@ -217,21 +217,21 @@ Future<bool> askFirst({
 
   await Get.defaultDialog(
     title: title,
-    content: AppText(data: content, textAlign: TextAlign.center),
+    content: textWidget(text: content, textAlign: TextAlign.center),
     radius: 8,
     confirm: ElevatedButton(
       onPressed: () async {
         userConfirmed = true;
         Get.closeAllDialogs();
       },
-      child: AppText(data: acceptButton),
+      child: textWidget(text: acceptButton),
     ),
     cancel: TextButton(
       onPressed: () {
         userConfirmed = false;
         Get.closeAllDialogs();
       },
-      child: AppText(data: cancelButton),
+      child: textWidget(text: cancelButton),
     ),
   );
   return userConfirmed;
@@ -254,14 +254,14 @@ Future<bool> getCallAgainPermission({
         userConfirmed = true;
         Get.closeAllDialogs();
       },
-      child: AppText(data: acceptButton),
+      child: textWidget(text: acceptButton),
     ),
     cancel: TextButton(
       onPressed: () {
         userConfirmed = false;
         Get.closeAllDialogs();
       },
-      child: AppText(data: cancelButton),
+      child: textWidget(text: cancelButton),
     ),
   );
 

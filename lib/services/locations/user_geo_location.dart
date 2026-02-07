@@ -91,21 +91,21 @@ We respect your privacy and only use your location when necessary for this featu
 
   await Get.defaultDialog(
     title: title,
-    content: AppText(data: content, textAlign: TextAlign.center),
+    content: textWidget(text: content, textAlign: TextAlign.center),
     radius: 8,
     confirm: ElevatedButton(
       onPressed: () async {
         userConfirmed = true;
         Get.closeAllDialogs();
       },
-      child: const AppText(data: "Allow Location"),
+      child: const textWidget(text: "Allow Location"),
     ),
     cancel: TextButton(
       onPressed: () {
         userConfirmed = false;
         Get.closeAllDialogs();
       },
-      child: const AppText(data: "Cancel"),
+      child: const textWidget(text: "Cancel"),
     ),
   );
 
@@ -128,21 +128,21 @@ We respect your privacy and only use your location when necessary for this featu
 
   await Get.defaultDialog(
     title: title,
-    content: AppText(data: content, textAlign: TextAlign.center),
+    content: textWidget(text: content, textAlign: TextAlign.center),
     radius: 8,
     confirm: ElevatedButton(
       onPressed: () async {
         userConfirmed = true;
         Get.closeAllDialogs();
       },
-      child: const AppText(data: "Allow Location"),
+      child: const textWidget(text: "Allow Location"),
     ),
     cancel: TextButton(
       onPressed: () {
         userConfirmed = false;
         Get.closeAllDialogs();
       },
-      child: const AppText(data: "Cancel"),
+      child: const textWidget(text: "Cancel"),
     ),
   );
   return userConfirmed;

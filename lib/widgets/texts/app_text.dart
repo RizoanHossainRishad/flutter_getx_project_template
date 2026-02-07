@@ -3,10 +3,10 @@ import 'package:flutter_getx_project_template/constant/app_colors.dart';
 import 'package:flutter_getx_project_template/constant/app_constant.dart';
 import 'package:get/get.dart';
 
-class AppText extends StatelessWidget {
-  const AppText({
+class textWidget extends StatelessWidget {
+  const textWidget({
     super.key,
-    required this.data,
+    required this.text,
     this.fontSize = 16,
     this.textScaleFactor = 0.9,
     this.color,
@@ -19,7 +19,7 @@ class AppText extends StatelessWidget {
     this.decorationColor,
     this.translate = false,
   });
-  final String data;
+  final String text;
   final double? fontSize;
   final double textScaleFactor;
   final Color? color;
@@ -34,7 +34,7 @@ class AppText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      translate ? data.tr : data,
+      translate ? text.tr : text,
       maxLines: maxLines ?? 100,
       overflow: overflow ?? TextOverflow.ellipsis,
       textAlign: textAlign,

@@ -17,7 +17,7 @@ class ChangePasswordScreen extends StatelessWidget {
       init: ChangePasswordScreenController(),
       builder: (controller) {
         return Scaffold(
-          appBar: AppBar(title: AppText(data: "Change Password", fontSize: 20), centerTitle: true),
+          appBar: AppBar(title: textWidget(text: "Change Password", fontSize: 20), centerTitle: true),
 
           body: SingleChildScrollView(
             padding: EdgeInsets.symmetric(horizontal: AppSize.width(value: 20.0)),
@@ -26,7 +26,7 @@ class ChangePasswordScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Gap(height: 20),
-                  AppInputWidget(
+                  TextformfieldWidget(
                     controller: controller.oldPasswordTextEditingController,
                     borderColor: AppColors.instance.boxBg,
                     labelText: "Old Password",
@@ -36,7 +36,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     prefix: Icon(Icons.lock_outline, color: AppColors.instance.dark200),
                   ),
                   Gap(height: 20),
-                  AppInputWidget(
+                  TextformfieldWidget(
                     controller: controller.newPasswordTextEditingController,
                     borderColor: AppColors.instance.boxBg,
                     labelText: "New Password",
@@ -46,7 +46,7 @@ class ChangePasswordScreen extends StatelessWidget {
                     prefix: Icon(Icons.lock_outline, color: AppColors.instance.dark200),
                   ),
                   Gap(height: 20),
-                  AppInputWidget(
+                  TextformfieldWidget(
                     isPassWordSecondValidation: true,
                     isPassWordSecondValidationController: controller.newPasswordTextEditingController,
                     controller: controller.confirmPasswordTextEditingController,

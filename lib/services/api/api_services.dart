@@ -63,7 +63,7 @@ class ApiServices {
     try {
       final dynamic response = await api.sendRequest.post(url, data: body);
       if (response.statusCode >= statusCodeStart && response.statusCode <= statusCodeEnd) {
-        return response.data;
+        return response.text;
       } else {
         return null;
       }

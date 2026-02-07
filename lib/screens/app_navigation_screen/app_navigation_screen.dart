@@ -12,6 +12,9 @@ class AppNavigationScreen extends StatelessWidget {
       init: AppNavigationScreenController(),
       builder: (controller) {
         return Scaffold(
+          appBar: AppBar(
+            title: const Text("App Navigation"),
+          ),
           extendBody: true,
           body: IndexedStack(index: controller.selectedIndex.value, children: selectedAppUserType == AppUserType.user ? [] : []),
 

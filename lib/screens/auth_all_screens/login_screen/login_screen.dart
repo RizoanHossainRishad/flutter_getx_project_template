@@ -36,9 +36,9 @@ class LoginScreen extends StatelessWidget {
 
                         Column(
                           children: [
-                            AppText(data: "Welcome!", fontSize: 40, fontWeight: FontWeight.w500),
+                            textWidget(text: "Welcome!", fontSize: 40, fontWeight: FontWeight.w500),
 
-                            AppText(data: "Sign in to continue", fontSize: 25, fontWeight: FontWeight.w200),
+                            textWidget(text: "Sign in to continue", fontSize: 25, fontWeight: FontWeight.w200),
                             Gap(height: AppSize.height(value: 20)),
                           ],
                         ),
@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                           height: AppSize.size.height * 0.3,
                           child: Column(
                             children: [
-                              AppInputWidget(
+                              TextformfieldWidget(
                                 controller: controller.emailTextEditingController,
                                 borderColor: AppColors.instance.boxBg,
                                 labelText: "Email",
@@ -57,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                                 prefix: Icon(Icons.email_outlined, color: AppColors.instance.dark200),
                               ),
                               Gap(height: AppSize.height(value: 20)),
-                              AppInputWidget(
+                              TextformfieldWidget(
                                 controller: controller.passwordTextEditingController,
                                 borderColor: AppColors.instance.boxBg,
                                 labelText: "Password",
@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                                   onTap: () {
                                     Get.toNamed(AppRoutes.instance.forgotScreen);
                                   },
-                                  child: AppText(data: "Forgot Password?", color: AppColors.instance.primary500, fontWeight: FontWeight.bold, fontSize: 16),
+                                  child: textWidget(text: "Forgot Password?", color: AppColors.instance.primary500, fontWeight: FontWeight.bold, fontSize: 16),
                                 ),
                               ),
                             ],
@@ -93,12 +93,12 @@ class LoginScreen extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                AppText(data: "Don't have an account? ", color: AppColors.instance.dark200, fontSize: 16),
+                                textWidget(text: "Don't have an account? ", color: AppColors.instance.dark200, fontSize: 16),
                                 GestureDetector(
                                   onTap: () {
                                     Get.toNamed(AppRoutes.instance.signUpScreen);
                                   },
-                                  child: AppText(data: "Sign up", color: AppColors.instance.primary500, fontSize: 16, fontWeight: FontWeight.bold),
+                                  child: textWidget(text: "Sign up", color: AppColors.instance.primary500, fontSize: 16, fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),

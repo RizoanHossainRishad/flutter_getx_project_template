@@ -30,11 +30,11 @@ class ForgotEmailInputScreen extends StatelessWidget {
                     children: [
                       AppImage(path: AppAssertImage.instance.forgotEmailInput, width: AppSize.size.width * 0.6),
                       Gap(height: 10),
-                      AppText(data: "Forgot password", fontSize: 25, fontWeight: FontWeight.w500),
+                      textWidget(text: "Forgot password", fontSize: 25, fontWeight: FontWeight.w500),
                       Gap(height: 10),
-                      AppText(data: "Enter your email to reset your \npassword.", fontSize: 16, fontWeight: FontWeight.w400, textAlign: TextAlign.center, height: 1.5),
+                      textWidget(text: "Enter your email to reset your \npassword.", fontSize: 16, fontWeight: FontWeight.w400, textAlign: TextAlign.center, height: 1.5),
                       Gap(height: 10),
-                      AppInputWidget(
+                      TextformfieldWidget(
                         labelText: "Email",
                         hintText: "Enter your mail",
                         prefix: Icon(Icons.email_outlined, color: AppColors.instance.dark300),

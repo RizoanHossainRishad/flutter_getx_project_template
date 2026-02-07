@@ -86,7 +86,7 @@ class _CalendarViewState extends State<CalendarView> {
     // Add empty containers for the previous month's days before the start of the current month
     for (int i = prevMonthDays; i > 0; i--) {
       DateTime prevMonthDay = DateTime(selectedDate.year, selectedDate.month, -i);
-      dayWidgets.add(Center(child: AppText(data: prevMonthDay.day.toString(), color: AppColors.instance.dark200)));
+      dayWidgets.add(Center(child: textWidget(text: prevMonthDay.day.toString(), color: AppColors.instance.dark200)));
     }
 
     // Actual days of the current month
@@ -102,7 +102,7 @@ class _CalendarViewState extends State<CalendarView> {
             child: Container(
               margin: EdgeInsets.all(AppSize.width(value: 5)),
               decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(width: 2, color: isSelected ? AppColors.instance.primary500 : AppColors.instance.transparent)),
-              child: Center(child: AppText(data: day.toString())),
+              child: Center(child: textWidget(text: day.toString())),
             ),
           ),
         ),
@@ -112,7 +112,7 @@ class _CalendarViewState extends State<CalendarView> {
     // Add empty containers for the next month's days after the end of the current month
     for (int i = 1; i <= nextMonthDays; i++) {
       DateTime nextMonthDay = DateTime(selectedDate.year, selectedDate.month + 1, i);
-      dayWidgets.add(Center(child: AppText(data: nextMonthDay.day.toString(), color: AppColors.instance.dark200)));
+      dayWidgets.add(Center(child: textWidget(text: nextMonthDay.day.toString(), color: AppColors.instance.dark200)));
     }
 
     // Ensure the total number of items is a multiple of 7 (for 7 columns) by adding empty containers if necessary
@@ -171,22 +171,22 @@ class _CalendarViewState extends State<CalendarView> {
                           PopupMenuButton(
                             color: AppColors.instance.primary300,
                             position: PopupMenuPosition.under,
-                            child: AppText(data: selectedYear.toString(), fontSize: 24, fontWeight: FontWeight.bold),
+                            child: textWidget(text: selectedYear.toString(), fontSize: 24, fontWeight: FontWeight.bold),
                             onSelected: (value) {
                               _changeYear(value);
                             },
                             itemBuilder: (context) {
                               return List.generate(5, (index) {
                                 int year = DateTime.now().year + index;
-                                return PopupMenuItem(value: year, child: AppText(data: year.toString()));
+                                return PopupMenuItem(value: year, child: textWidget(text: year.toString()));
                               });
                             },
                           ),
-                          AppText(data: "  -  ", fontSize: 24, fontWeight: FontWeight.bold),
+                          textWidget(text: "  -  ", fontSize: 24, fontWeight: FontWeight.bold),
                           PopupMenuButton(
                             color: AppColors.instance.primary500,
                             position: PopupMenuPosition.under,
-                            child: AppText(data: months[selectedDate.month - 1], fontSize: 24, fontWeight: FontWeight.bold),
+                            child: textWidget(text: months[selectedDate.month - 1], fontSize: 24, fontWeight: FontWeight.bold),
                             onSelected: (value) {
                               setState(() {
                                 selectedDate = DateTime(selectedDate.year, value + 1, 1);
@@ -194,7 +194,7 @@ class _CalendarViewState extends State<CalendarView> {
                             },
                             itemBuilder: (context) {
                               return List.generate(months.length - 1, (index) {
-                                return PopupMenuItem(value: index, child: AppText(data: months[index]));
+                                return PopupMenuItem(value: index, child: textWidget(text: months[index]));
                               });
                             },
                           ),
@@ -224,7 +224,7 @@ class _CalendarViewState extends State<CalendarView> {
                 // Weekday labels row
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: weekdays.map((day) => Expanded(child: Container(alignment: Alignment.center, child: AppText(data: day, fontWeight: FontWeight.bold)))).toList(),
+                  children: weekdays.map((day) => Expanded(child: Container(alignment: Alignment.center, child: textWidget(text: day, fontWeight: FontWeight.bold)))).toList(),
                 ),
                 SizedBox(height: 8),
 

@@ -80,4 +80,28 @@ class AppColors {
   final Color white700 = const Color(0xffa9a9a9);
   final Color white800 = const Color(0xff838383);
   final Color white900 = const Color(0xff646464);
+
+  /////////////////////////////////// grey color
+  final Color grey50 = const Color(0xfff9fafb);
+  final Color grey100 = const Color(0xfff3f4f6);
+  final Color grey200 = const Color(0xffe5e7eb);
+  final Color grey300 = const Color(0xffd1d5db);
+  final Color grey400 = const Color(0xff9ca3af);
+  final Color grey500 = const Color(0xff6b7280);
+  final Color grey600 = const Color(0xff4b5563);
+  final Color grey700 = const Color(0xff374151);
+  final Color grey800 = const Color(0xff1f2937);
+  final Color grey900 = const Color(0xff111827);
+
+  /////////////////////////////////// red color
+  final Color red50 = const Color(0xfffef2f2);
+  final Color red100 = const Color(0xfffee2e2);
+  final Color red200 = const Color(0xfffecaca);
+  final Color red300 = const Color(0xfffca5a5);
+  final Color red400 = const Color(0xfff87171);
+  final Color red500 = const Color(0xffef4444); // Standard "Danger" red
+  final Color red600 = const Color(0xffdc2626);
+  final Color red700 = const Color(0xffb91c1c);
+  final Color red800 = const Color(0xff991b1b);
+  final Color red900 = const Color(0xff7f1d1d);
 }

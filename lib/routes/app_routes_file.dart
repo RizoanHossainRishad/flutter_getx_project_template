@@ -10,6 +10,7 @@ import 'package:flutter_getx_project_template/screens/auth_all_screens/forgot_sc
 import 'package:flutter_getx_project_template/screens/auth_all_screens/login_screen/login_screen.dart';
 import 'package:flutter_getx_project_template/screens/auth_all_screens/otp_verification_screen/otp_verification_screen.dart';
 import 'package:flutter_getx_project_template/screens/auth_all_screens/sign_up_screen/sign_up_screen.dart';
+import 'package:flutter_getx_project_template/screens/demo_screens/demoScreen.dart';
 import 'package:flutter_getx_project_template/screens/error_screen/error_screen.dart';
 import 'package:flutter_getx_project_template/screens/not_found_screen/not_found_screen.dart';
 import 'package:flutter_getx_project_template/screens/privacy_policy_screen/privacy_policy_screen.dart';
@@ -35,4 +36,7 @@ List<GetPage> appRootRoutesFile = <GetPage>[
   GetPage(name: AppRoutes.instance.privacyPolicy, binding: NavigationScreenBinding(), page: () => const PrivacyPolicyScreen(), middlewares: [InternetCheckMiddleWare()]),
   GetPage(name: AppRoutes.instance.aboutUs, binding: NavigationScreenBinding(), page: () => const AboutUsScreen(), middlewares: [InternetCheckMiddleWare()]),
   /////////////////////  app base end
+
+
+  GetPage(name: AppRoutes.instance.demoscreen, page:()=> const Demoscreen()),
 ];

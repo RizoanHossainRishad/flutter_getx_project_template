@@ -36,11 +36,11 @@ class OtpVerificationScreen extends StatelessWidget {
 
                     Column(
                       children: [
-                        AppText(data: "Verify your account", fontSize: 25, fontWeight: FontWeight.w500),
+                        textWidget(text: "Verify your account", fontSize: 25, fontWeight: FontWeight.w500),
                         Gap(height: 5),
-                        AppText(data: "We've Sent a Code to ${OtpRelatedFunction().maskEmail(controller.email.value)}"),
+                        textWidget(text: "We've Sent a Code to ${OtpRelatedFunction().maskEmail(controller.email.value)}"),
                         Gap(height: 30),
-                        AppInputWidget(
+                        TextformfieldWidget(
                           borderColor: AppColors.instance.primary300,
                           hintText: "_ _ _ _ _ _",
                           textAlign: TextAlign.center,
