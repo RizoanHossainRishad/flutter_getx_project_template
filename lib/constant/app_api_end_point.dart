@@ -10,6 +10,9 @@ class AppApiEndPoint {
   final String domain = _getDomain();
   final String baseUrl = "${_getDomain()}/api/v1";
   final String liveServer = "https://";
+  final String imageBaseUrl ='';
+  final String refeshTokenUrl = "";
+
 }
 
 String _getDomain() {

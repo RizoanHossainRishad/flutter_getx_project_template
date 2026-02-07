@@ -1,7 +1,10 @@
+import 'package:core_kit/core_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_project_template/constant/app_api_end_point.dart';
 import 'package:flutter_getx_project_template/routes/app_routes.dart';
 import 'package:flutter_getx_project_template/routes/app_routes_file.dart';
 import 'package:flutter_getx_project_template/screens/error_screen/error_screen.dart';
+import 'package:flutter_getx_project_template/services/storage_services/get_storage_services.dart';
 import 'package:flutter_getx_project_template/utils/app_theme.dart';
 import 'package:get/get.dart';
 
@@ -23,6 +26,7 @@ class MainEntryApp extends StatelessWidget {
       transitionDuration: const Duration(microseconds: 100),
       navigatorKey: appNavigatorStateKey,
       builder: (context, child) {
+
         ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
           return const ErrorScreen();
         };
@@ -31,6 +35,32 @@ class MainEntryApp extends StatelessWidget {
         }
         return const SizedBox();
       },
+
+
     );
   }
 }
+
+
+//INCASE YOU IMPORT CORE KIT
+//---IN PUBSPEC.YAML
+/*core_kit:
+  git:
+    url: https://github.com/kmmuzahid/flutter_core_kit.git
+      ref: 1.0.16*/
+
+/*return CoreKit.init(
+back: Get.back,
+imageBaseUrl: AppApiEndPoint.instance.imageBaseUrl,
+navigatorKey: Get.key,
+dioServiceConfig: DioServiceConfig(baseUrl: AppApiEndPoint.instance.baseUrl,
+refreshTokenEndpoint: AppApiEndPoint.instance.refeshTokenUrl),
+tokenProvider: TokenProvider(accessToken: ()async=> GetStorageServices.instance.getAccessToken(),
+refreshToken: ()async=> GetStorageServices.instance.getRefreshToken(), updateTokens: (data)async{
+GetStorageServices.instance.setToken(accessToken:  '', refreshToken: '');
+}),
+child: child
+);
+
+
+*/

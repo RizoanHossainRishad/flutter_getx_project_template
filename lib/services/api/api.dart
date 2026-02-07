@@ -29,7 +29,7 @@ class AppApi {
           options.contentType = 'application/json';
           options.headers["Accept"] = "application/json";
 
-          String token = storageServices.getToken();
+          String token = storageServices.getAccessToken();
           if (token.isNotEmpty) {
             options.headers["Authorization"] = "Bearer $token";
           }

@@ -23,7 +23,7 @@ class SplashScreenController extends GetxController {
 
       // 3. Check storage
       final bool hasSeenOnboard = storageServices.getOnboardScreen();
-      final String token = storageServices.getToken();
+      final String token = storageServices.getAccessToken();
 
     /*  // 4. Determine destination
       if (hasSeenOnboard) {

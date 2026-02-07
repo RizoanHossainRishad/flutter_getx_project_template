@@ -11,18 +11,27 @@ class GetStorageServices {
   GetStorage box = GetStorage();
 
   ////////////////  token
-  Future<void> setToken(String value) async {
+  Future<void> setToken({required String accessToken,required  String refreshToken}) async {
     try {
-      await box.write(AppStorageKey.instance.token, value);
+      await box.write(AppStorageKey.instance.accessToken, accessToken);
+      await box.write(AppStorageKey.instance.refreshToken, refreshToken);
       await box.save();
     } catch (e) {
       errorLog("set token ", e);
     }
   }
 
-  String getToken() {
+  String getAccessToken() {
     try {
-      return box.read(AppStorageKey.instance.token) ?? "";
+      return box.read(AppStorageKey.instance.accessToken) ?? "";
+    } catch (e) {
+      errorLog("get token", e);
+      return "";
+    }
+  }
+  String getRefreshToken() {
+    try {
+      return box.read(AppStorageKey.instance.refreshToken) ?? "";
     } catch (e) {
       errorLog("get token", e);
       return "";
@@ -90,7 +99,8 @@ class GetStorageServices {
   ///logout
   Future<void> storageClear() async {
     try {
-      await box.write(AppStorageKey.instance.token, "");
+      await box.write(AppStorageKey.instance.accessToken, "");
+      await box.write(AppStorageKey.instance.refreshToken, "");
       await setLanguage("en_US");
     } catch (e) {
       errorLog("logout", e);
